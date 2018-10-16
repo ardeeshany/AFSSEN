@@ -7,8 +7,16 @@ Author: Ardalan Mirshani and Matthew Reimherr
 Maintainer: Ardalan Mirshani <ardeeshany@gmail.com>
 Description: Select important variables and produce smooth estimates of their parameters in a function-on-scalar linear model with sub-Gaussian errors and high-dimensional predictors.
 License: GPL-3
-Imports: Rcpp, RcppArmadillo, nloptr, kernlab, MASS
-LinkingTo: Rcpp, RcppArmadillo
+Depends: 
+    Rcpp,
+    RcppArmadillo,
+    nloptr,
+    kernlab,
+    MASS,
+    caret
+LinkingTo: 
+    Rcpp,
+    RcppArmadillo
 LazyData: TRUE
 RoxygenNote: 6.1.0
 VignetteBuilder: knitr

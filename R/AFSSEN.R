@@ -65,6 +65,9 @@
 #'  }
 #'
 #' @export
+#'
+#' @import Rcpp MASS caret nloptr kernlab
+#'
 #' @examples
 #' \dontrun{
 #' data(simulation)
@@ -89,6 +92,17 @@ AFSSEN <- function(X,Y, T_domain = seq(0, 1, length = 50),
                      proportion_training_set=0.75, verbose=FALSE, fold_ad=10)
 
 {
+
+    # sourceCpp('src/FLAME_functions_cpp.cpp')
+    # source("R/covMaterniso.R")
+    # source("R/generation_kernel.R")
+    # source("R/generation_kernel.R")
+    # source("R/sobolev_kernel_generation.R")
+    # source("R/norm_matrix_H.R")
+    # source("R/projection_basis.R")
+    # source("R/Matern_kernel_generation.R")
+    # source("R/generation_kernel.R")
+
 
 ############################################################################
 #
@@ -592,11 +606,11 @@ AFSSEN <- function(X,Y, T_domain = seq(0, 1, length = 50),
 # X_total <- X
 #
 # ##############
+# # # #
 # # #
-# #
-# #
-# #
-# #
+# # #
+# # #
+# # #
 # Output <- AFSSEN(X=X_total,Y=Y_total,T_domain = seq(0, 1, length = 50),
 #                      # X   (a N*I numerical matrix)    N = #observations     I = #all_predictors
 #                      # Y = Y_ful=XB+E   (a N*m matrix of pointwise evaluation!)   m = #time_points

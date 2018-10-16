@@ -62,6 +62,9 @@
 #'  }
 #'
 #' @export
+#'
+#' @import Rcpp MASS caret nloptr kernlab
+#'
 #' @examples
 #' \dontrun{
 #' data(simulation)
@@ -85,6 +88,17 @@ AFSSEN_CV <- function(type_kernel="exponential",param_kernel=8,
                      nu_eps = 1.5, range_eps=1/4 # for epsilon in Matern
                      )
 {
+
+    # sourceCpp('src/FLAME_functions_cpp.cpp')
+    # source("R/covMaterniso.R")
+    # source("R/generation_kernel.R")
+    # source("R/generation_kernel.R")
+    # source("R/sobolev_kernel_generation.R")
+    # source("R/norm_matrix_H.R")
+    # source("R/projection_basis.R")
+    # source("R/Matern_kernel_generation.R")
+    # source("R/generation_kernel.R")
+
 
 ############################################################################
 #
