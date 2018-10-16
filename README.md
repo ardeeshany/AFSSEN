@@ -10,6 +10,16 @@ AFSSEN is a methodology that simultaneously select significant predicotrs and pr
 <br>
 </br>
 
+### Documentation
+
+For installing this package, use
+
+`
+devtools::install_github("ardeeshany/AFSSEN")
+`
+<br>
+</br>
+
 #### AFSSEN.R
 
 We have option to control sparsity and smoothness separately with using two penalty parameters $\lambda_H$ and $\lambda_K$. We aim to estimate a smooth version of $\bf{\beta}$ to minimize the following target function.
@@ -28,16 +38,7 @@ We have option to control sparsity and smoothness separately with using two pena
 The following **AFFSEN()** function helps us to estimate the smooth $\bf{\beta}$ and find the significant predictors:
 
 <center>
-![](AFSSEN.png)
+![](inst/doc/AFSSEN.png)
 </center>
 
-<br>
-</br>
 
-Please click **[Here](Readme.pdf)** for the AFSSEN function details.
-
-<br>
-</br>
-
-<br>
-</br>
