@@ -40,4 +40,3 @@ M_integ <- length(T_domain)/diff(range(T_domain))
 projection_basis(Y_full, eigenvect, M_integ ) # projection on the J dimensional
 # basis of the Y functions.
 }
-

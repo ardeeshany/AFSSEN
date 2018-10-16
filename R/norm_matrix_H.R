@@ -27,6 +27,7 @@ norm_matrix_H <- function(M)
     }
 
     ## ?@A: Shouldn't it be norm <- apply(M,2, function(x){sqrt(sum(x^2))})? or I guess, the M should be a N \times J matrix, not J*N !
-    norm <- apply(M,1, function(x){sqrt(sum(x^2))} )
+    norm <- apply(M,2, function(x){sqrt(sum(x^2))} )
     return(norm)
 }
+

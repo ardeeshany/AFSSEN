@@ -1,0 +1,304 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+\pagenumbering{gobble}
+
+```{r ggplt, message=FALSE, echo=FALSE, fig.width=10, fig.height=13}
+library(ggplot2)
+library(ggpubr)
+library(magrittr)
+mat_pred_error <- matrix(NA,100,7)
+mat_pred_error_der <- matrix(NA,100,7)
+mean_true_positive <- matrix(1,7)
+mean_false_positive <- matrix(1,7)
+index <- as.character(c("01",0:5))
+for(f in 1:7){
+  load(paste0("~/Dropbox/PSU/Research/High Dim-FDA/AFSSEN_Sep_smooth/Results/Variables_r_gau",index[f],".RData"))
+  mat_pred_error[,f] = 500*pred_error
+  mat_pred_error_der[,f] = 500*pred_error_der
+  mean_true_positive[f] <- mean_true_pos_error
+  mean_false_positive[f] <- mean_false_pos_error
+}
+
+
+sigma_kernel <- 2^{-1:5}
+mean_pred_error <- colMeans(mat_pred_error)
+mean_pred_error_der <- colMeans(mat_pred_error_der)
+sd_pred_error <- matrix(NA,7,1)
+sd_pred_error_der <- matrix(NA,7,1)
+for(i in 1:7){
+  sd_pred_error[i,] <- sd(mat_pred_error[,i])
+  sd_pred_error_der[i,] <- sd(mat_pred_error_der[,i])
+}
+
+
+gau_pred_error <- as.data.frame(cbind(as.factor(sigma_kernel),mean_pred_error,sd_pred_error))
+gau_pred_error_der <- as.data.frame(cbind(as.factor(sigma_kernel),mean_pred_error_der,sd_pred_error_der))
+colnames(gau_pred_error) <- c("sigma","mean","sd")
+colnames(gau_pred_error_der) <- c("sigma","mean","sd")
+
+gau_true_pos <- as.data.frame(cbind(as.factor(sigma_kernel),mean_true_positive))
+gau_false_pos <- as.data.frame(cbind(as.factor(sigma_kernel),mean_false_positive))
+colnames(gau_true_pos) <- c("sigma","mean")
+colnames(gau_false_pos) <- c("sigma","mean")
+
+#####################################################
+
+
+mat_pred_error <- matrix(NA,100,7)
+mat_pred_error_der <- matrix(NA,100,7)
+mean_true_positive <- matrix(1,7)
+mean_false_positive <- matrix(1,7)
+index <- as.character(c("01",0:5))
+for(f in 1:7){
+  load(paste0("~/Dropbox/PSU/Research/High Dim-FDA/AFSSEN_Sep_smooth/Matern/Results/Variables_r_mat3_",index[f],".RData"))
+  mat_pred_error[,f] = 500*pred_error
+  mat_pred_error_der[,f] = 500*pred_error_der
+  mean_true_positive[f] <- mean_true_pos_error
+  mean_false_positive[f] <- mean_false_pos_error
+}
+
+
+sigma_kernel <- 2^{-1:5}
+mean_pred_error <- colMeans(mat_pred_error)
+mean_pred_error_der <- colMeans(mat_pred_error_der)
+sd_pred_error <- matrix(NA,7,1)
+sd_pred_error_der <- matrix(NA,7,1)
+for(i in 1:7){
+  sd_pred_error[i,] <- sd(mat_pred_error[,i])
+  sd_pred_error_der[i,] <- sd(mat_pred_error_der[,i])
+}
+
+
+mat3_pred_error <- as.data.frame(cbind(as.factor(sigma_kernel),mean_pred_error,sd_pred_error))
+mat3_pred_error_der <- as.data.frame(cbind(as.factor(sigma_kernel),mean_pred_error_der,sd_pred_error_der))
+colnames(mat3_pred_error) <- c("sigma","mean","sd")
+colnames(mat3_pred_error_der) <- c("sigma","mean","sd")
+
+mat3_true_pos <- as.data.frame(cbind(as.factor(sigma_kernel),mean_true_positive))
+mat3_false_pos <- as.data.frame(cbind(as.factor(sigma_kernel),mean_false_positive))
+colnames(mat3_true_pos) <- c("sigma","mean")
+colnames(mat3_false_pos) <- c("sigma","mean")
+
+
+#####################################################
+
+
+mat_pred_error <- matrix(NA,100,7)
+mat_pred_error_der <- matrix(NA,100,7)
+mean_true_positive <- matrix(1,7)
+mean_false_positive <- matrix(1,7)
+index <- as.character(c("01",0:5))
+for(f in 1:7){
+  load(paste0("~/Dropbox/PSU/Research/High Dim-FDA/AFSSEN_Sep_smooth/Matern/Results/Variables_r_mat5_",index[f],".RData"))
+  mat_pred_error[,f] = 500*pred_error
+  mat_pred_error_der[,f] = 500*pred_error_der
+  mean_true_positive[f] <- mean_true_pos_error
+  mean_false_positive[f] <- mean_false_pos_error
+}
+
+
+sigma_kernel <- 2^{-1:5}
+mean_pred_error <- colMeans(mat_pred_error)
+mean_pred_error_der <- colMeans(mat_pred_error_der)
+sd_pred_error <- matrix(NA,7,1)
+sd_pred_error_der <- matrix(NA,7,1)
+for(i in 1:7){
+  sd_pred_error[i,] <- sd(mat_pred_error[,i])
+  sd_pred_error_der[i,] <- sd(mat_pred_error_der[,i])
+}
+
+
+mat5_pred_error <- as.data.frame(cbind(as.factor(sigma_kernel),mean_pred_error,sd_pred_error))
+mat5_pred_error_der <- as.data.frame(cbind(as.factor(sigma_kernel),mean_pred_error_der,sd_pred_error_der))
+colnames(mat5_pred_error) <- c("sigma","mean","sd")
+colnames(mat5_pred_error_der) <- c("sigma","mean","sd")
+
+mat5_true_pos <- as.data.frame(cbind(as.factor(sigma_kernel),mean_true_positive))
+mat5_false_pos <- as.data.frame(cbind(as.factor(sigma_kernel),mean_false_positive))
+colnames(mat5_true_pos) <- c("sigma","mean")
+colnames(mat5_false_pos) <- c("sigma","mean")
+
+
+
+
+#####################################################
+
+
+
+
+mat_pred_error <- matrix(NA,100,7)
+mat_pred_error_der <- matrix(NA,100,7)
+mean_true_positive <- matrix(1,7)
+mean_false_positive <- matrix(1,7)
+index <- as.character(c("01",0:5))
+for(f in 1:7){
+  load(paste0("~/Dropbox/PSU/Research/High Dim-FDA/AFSSEN_Sep_smooth/Results/Variables_r_exp",index[f],".RData"))
+  mat_pred_error[,f] = 500*pred_error
+  mat_pred_error_der[,f] = 500*pred_error_der
+  mean_true_positive[f] <- mean_true_pos_error
+  mean_false_positive[f] <- mean_false_pos_error
+}
+
+
+sigma_kernel <- 2^{-1:5}
+mean_pred_error <- colMeans(mat_pred_error)
+mean_pred_error_der <- colMeans(mat_pred_error_der)
+sd_pred_error <- matrix(NA,7,1)
+sd_pred_error_der <- matrix(NA,7,1)
+for(i in 1:7){
+  sd_pred_error[i,] <- sd(mat_pred_error[,i])
+  sd_pred_error_der[i,] <- sd(mat_pred_error_der[,i])
+}
+
+
+exp_pred_error <- as.data.frame(cbind(sigma_kernel,mean_pred_error,sd_pred_error))
+exp_pred_error_der <- as.data.frame(cbind(as.factor(sigma_kernel),mean_pred_error_der,sd_pred_error_der))
+colnames(exp_pred_error) <- c("sigma","mean","sd")
+colnames(exp_pred_error_der) <- c("sigma","mean","sd")
+
+exp_true_pos <- as.data.frame(cbind(sigma_kernel,mean_true_positive))
+exp_false_pos <- as.data.frame(cbind(sigma_kernel,mean_false_positive))
+colnames(exp_true_pos) <- c("sigma","mean")
+colnames(exp_false_pos) <- c("sigma","mean")
+
+
+#################
+
+fl.exp_pred_error <- as.data.frame(cbind(sigma_kernel,c(128,99,89,82,79,77,77),rep(0,7)))
+colnames(fl.exp_pred_error) <- c("sigma","mean","sd")
+
+fl.gau_pred_error <- as.data.frame(cbind(sigma_kernel,c(169,154,108,95,87,90,85),rep(0,7)))
+colnames(fl.gau_pred_error) <- c("sigma","mean","sd")
+
+
+
+fl.exp_pred_error_der <- as.data.frame(cbind(sigma_kernel,c(595,490,460,440,420,345,270),rep(0,7)))
+colnames(fl.exp_pred_error_der) <- c("sigma","mean","sd")
+
+fl.gau_pred_error_der <- as.data.frame(cbind(sigma_kernel,c(890,880,605,590,610,875,990),rep(0,7)))
+colnames(fl.gau_pred_error_der) <- c("sigma","mean","sd")
+
+
+fl.exp_true_pos <- as.data.frame(cbind(sigma_kernel,c(9.27,9.43,9.58,9.66,9.72,9.76,9.8)))
+fl.gau_true_pos <- as.data.frame(cbind(sigma_kernel,c(9.25,9.4,9.55,9.6,9.7,9.75,9.8)))
+fl.exp_false_pos <- as.data.frame(cbind(sigma_kernel,c(0.8,0.78,0.82,0.8,0.8,0.8,0.8)))
+fl.gau_false_pos <- as.data.frame(cbind(sigma_kernel,c(0.8,0.75,0.78,0.82,0.82,0.8,0.79)))
+colnames(fl.exp_true_pos) <- c("sigma","mean")
+colnames(fl.gau_true_pos) <- c("sigma","mean")
+colnames(fl.exp_false_pos) <- c("sigma","mean")
+colnames(fl.gau_false_pos) <- c("sigma","mean")
+
+
+
+
+
+##############################################
+
+
+pred_error <- as.data.frame(rbind(exp_pred_error,mat3_pred_error,
+                                  mat5_pred_error,gau_pred_error,
+                                  fl.exp_pred_error,fl.gau_pred_error))
+pred_error$kernel <- c(rep("afssen_exp",7),rep("afssen_mat3/2",7),
+                       rep("afssen_mat5/2",7),rep("afssen_gau",7),
+                       rep("flame_exp",7),rep("flame_gau",7))
+pred_error$sigma <- 2^{-1:5}
+
+
+pred_error_der <- as.data.frame(rbind(exp_pred_error_der,mat3_pred_error_der,
+                                      mat5_pred_error_der,gau_pred_error_der,
+                        fl.exp_pred_error_der,fl.gau_pred_error_der))
+pred_error_der$kernel <- c(rep("afssen_exp",7),rep("afssen_mat3/2",7),
+                       rep("afssen_mat5/2",7),rep("afssen_gau",7),
+                       rep("flame_exp",7),rep("flame_gau",7))
+pred_error_der$sigma <- 2^{-1:5}
+
+
+true_pos <- as.data.frame(rbind(exp_true_pos,mat3_true_pos,
+                                mat5_true_pos,gau_true_pos,
+                                fl.exp_true_pos,fl.gau_true_pos))
+true_pos$kernel <-c(rep("afssen_exp",7),rep("afssen_mat3/2",7),
+                       rep("afssen_mat5/2",7),rep("afssen_gau",7),
+                       rep("flame_exp",7),rep("flame_gau",7))
+true_pos$sigma <- 2^{-1:5}
+
+false_pos <- as.data.frame(rbind(exp_false_pos,mat3_false_pos,
+                                 mat5_false_pos,gau_false_pos,
+                                 fl.exp_false_pos,fl.gau_false_pos))
+false_pos$kernel <-c(rep("afssen_exp",7),rep("afssen_mat3/2",7),
+                       rep("afssen_mat5/2",7),rep("afssen_gau",7),
+                       rep("flame_exp",7),rep("flame_gau",7))
+false_pos$sigma <- 2^{-1:5}
+
+
+
+
+p1 <- ggplot(data = pred_error,aes(x =sigma,y = mean,col=kernel))+
+  #coord_cartesian( ylim=c(40,100))+
+  geom_point(size=2)+
+  geom_line(size=0.5)+
+  #geom_text(aes(label=round(mean,4)),hjust = -0.3,vjust=-0.8)+
+  #geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd), width=.5,position=position_dodge(0.3))+
+  ggtitle("mean prediction error for smooth setting") +theme(plot.title =       
+element_text(hjust = 0.5,size=15))+
+  xlab("range parameter of kernel") + ylab("mean prediction error")+
+  theme(
+  plot.title = element_text(size=18, face="bold"),
+  axis.title.x = element_text(size=14, face="bold"),
+  axis.title.y = element_text(size=14, face="bold"),
+  legend.key.size = unit(2,"line"),
+  legend.text=element_text(size=14))
+
+
+p2 <- ggplot(data = pred_error_der,aes(x =sigma,y = mean,col=kernel))+
+  #coord_cartesian( ylim=c(10, 700))+
+  geom_point(size=2)+
+  geom_line(size=0.5)+
+  #geom_text(aes(label=round(mean,4)),hjust = -0.3,vjust=-0.8)+
+  #geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd), width=.5,position=position_dodge(0.3))+
+  ggtitle("mean prediction error derivative for smooth setting") +theme(plot.title = element_text(hjust = 0.5,size=15))+
+  xlab("range parameter of kernel") + ylab("mean prediction error derivative")+
+  theme(
+  plot.title = element_text(size=18, face="bold"),
+  axis.title.x = element_text(size=14, face="bold"),
+  axis.title.y = element_text(size=14, face="bold"),
+  legend.key.size = unit(2,"line"),
+  legend.text=element_text(size=14))
+
+
+
+p3 <- ggplot(data = true_pos,aes(x =sigma,y = mean,col=kernel))+
+  #coord_cartesian( ylim=c(9.4, 10))+
+  geom_point(size=2)+
+  geom_line(size=0.5)+
+  #geom_text(aes(label=round(mean,4)),hjust = -0.3,vjust=-0.8)+
+  ggtitle("mean true positive for smooth setting") +theme(plot.title = element_text(hjust = 0.5,size=8))+
+  xlab("range parameter of kernel") + ylab("mean true positive number of predictors")+
+    theme(
+  plot.title = element_text(size=18, face="bold"),
+  axis.title.x = element_text(size=14, face="bold"),
+  axis.title.y = element_text(size=14, face="bold"),
+    legend.key.size = unit(2,"line"),
+  legend.text=element_text(size=14))
+
+
+p4 <- ggplot(data = false_pos,aes(x =sigma,y = mean,col=kernel))+
+  #coord_cartesian( ylim=c(0, 1))+
+  geom_point(size=2)+
+  geom_line(size=0.5)+
+  #geom_text(aes(label=round(mean,4)),hjust = -0.3,vjust=-0.8)+
+  ggtitle("mean false positive for smooth setting") +theme(plot.title = element_text(hjust = 0.5,size=8))+
+  xlab("range parameter of kernel") + ylab("mean false positive number of predictors")+
+    theme(
+  plot.title = element_text(size=18, face="bold"),
+  axis.title.x = element_text(size=14, face="bold"),
+  axis.title.y = element_text(size=14, face="bold"),
+    legend.key.size = unit(2,"line"),
+  legend.text=element_text(size=14))
+
+ggarrange(p2,nrow = 1,ncol = 1,common.legend = T,legend = "bottom")
+```
+

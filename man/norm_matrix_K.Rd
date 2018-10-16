@@ -28,4 +28,3 @@ data(simulation)
 norm_K = sum(norm_matrix_K(Y_matrix, eigenval))
 
 }
-

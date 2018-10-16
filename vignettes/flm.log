@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 SEP 2017 14:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 OCT 2017 12:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/private/var/folders/tl/f6tppwwn18v9_3_7kl6grh240000gn/T/Rtmp1w4mly/preview-2
-b27779aa97.dir/flm.tex
+**/private/var/folders/tl/f6tppwwn18v9_3_7kl6grh240000gn/T/Rtmpea6P52/preview-1
+f304b6e1259.dir/flm.tex
 
-(/private/var/folders/tl/f6tppwwn18v9_3_7kl6grh240000gn/T/Rtmp1w4mly/preview-2b
-27779aa97.dir/flm.tex
+(/private/var/folders/tl/f6tppwwn18v9_3_7kl6grh240000gn/T/Rtmpea6P52/preview-1f
+304b6e1259.dir/flm.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
@@ -948,12 +948,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 907.
  ) 
 Here is how much of TeX's memory you used:
  13185 strings out of 493089
- 191876 string characters out of 6134842
+ 191879 string characters out of 6134842
  300579 words of memory out of 5000000
  16345 multiletter control sequences out of 15000+600000
  67159 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,12n,35p,660b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,12n,35p,661b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2015/t
 exmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2015/texmf-dist/fon
@@ -976,7 +976,7 @@ mtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on flm.pdf (12 pages, 403999 bytes).
+Output written on flm.pdf (12 pages, 404056 bytes).
 PDF statistics:
  274 PDF objects out of 1000 (max. 8388607)
  226 compressed objects within 3 object streams

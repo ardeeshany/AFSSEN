@@ -1,18 +1,16 @@
-Package: flm
+Package: AFSSEN
 Type: Package
-Title: FLAME for high-dimensional Function-on-Scalar regression
-        problems
+Title: Adaptive Function on Scalar Elastic Net
 Version: 0.1
-Date: 2016-10-24
-Author: Alice Parodi and Matthew Reimherr
-Maintainer: Alice Parodi <alicecarla.parodi@polimi.it>
-Description: Functional Linear Adaptive Mixed Estimation for high dimensional Function-on-Scalar regression
+Date: 2018-10-16
+Author: Ardalan Mirshani and Matthew Reimherr
+Maintainer: Ardalan Mirshani <ardeeshany@gmail.com>
+Description: Select important variables and produce smooth estimates of their parameters in a function-on-scalar linear model with sub-Gaussian errors and high-dimensional predictors.
 License: GPL-3
-Imports: Rcpp, RcppArmadillo, nloptr, kernlab, fda
-Suggests: MASS, knitr, rmarkdown
+Imports: Rcpp, RcppArmadillo, nloptr, kernlab, MASS
 LinkingTo: Rcpp, RcppArmadillo
 LazyData: TRUE
-RoxygenNote: 5.0.1
+RoxygenNote: 6.1.0
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2016-10-24 08:49:08 UTC; Alice
+Packaged: 2018-10-16; Ardalan

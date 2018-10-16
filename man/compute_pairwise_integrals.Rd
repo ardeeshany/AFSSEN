@@ -27,4 +27,3 @@ T_domain <- seq(0, 1, length = 50)
 pairwise_derivartives <- compute_pairwise_integrals(derivatives, T_domain)
 
 }
-

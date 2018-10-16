@@ -62,4 +62,3 @@ kernel_here <- generation_kernel_periodic(period = 1/2,
 names(kernel_here)
 
 }
-

@@ -31,4 +31,3 @@ projection_domain(Y_matrix, eigenvect) # projection of the data
 # on the time domain seq(0, 1, length = 50)
 
 }
-

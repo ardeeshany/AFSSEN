@@ -31,4 +31,3 @@ T_domain <- seq(0, 1, length = 50)
 pairwise_derivartives <- compute_pairwise_integrals(derivatives, T_domain)
 sum(norm_matrix_H_derivatives(t(Y_matrix), pairwise_derivartives))
 }
-

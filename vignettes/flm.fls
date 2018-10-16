@@ -1,8 +1,8 @@
-PWD /Users/ardalanmirshani/Dropbox/PSU/Research/High Dim-FDA/Packages/FLAME/flm/vignettes
+PWD /Users/ardalanmirshani/Dropbox/PSU/Research/High Dim-FDA/FLAME Package/FLAME/flm/vignettes
 INPUT /usr/local/texlive/2015/texmf.cnf
 INPUT /usr/local/texlive/2015/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /private/var/folders/tl/f6tppwwn18v9_3_7kl6grh240000gn/T/Rtmp1w4mly/preview-2b27779aa97.dir/flm.tex
+INPUT /private/var/folders/tl/f6tppwwn18v9_3_7kl6grh240000gn/T/Rtmpea6P52/preview-1f304b6e1259.dir/flm.tex
 OUTPUT flm.log
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls

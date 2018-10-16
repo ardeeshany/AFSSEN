@@ -86,4 +86,3 @@ eigenvectors <- kernel_here$eigenvect
 der <- kernel_here$derivatives
 
 }
-

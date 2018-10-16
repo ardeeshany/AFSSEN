@@ -54,4 +54,3 @@ Sig_alpha <- covMaterniso(nu_alpha, rho = range, sigma = sqrt(variance), T_domai
 # alpha <- mvrnorm(mu=mu_alpha, Sigma=Sig_alpha, n=1) # if MASS is inslalled
 
 }
-

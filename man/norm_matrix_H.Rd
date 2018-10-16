@@ -24,4 +24,3 @@ length(norm_matrix_H(Y_matrix))
 sum(norm_matrix_H(Y_matrix))
 
 }
-

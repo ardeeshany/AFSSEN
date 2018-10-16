@@ -2,6 +2,8 @@
 title: "`flm`: the FLAME method for estimation and variable selection in Function-on-Scalar regression problems"
 author: "Alice Parodi and Matthew Reimherr"
 date: "`r Sys.Date()`"
+header-includes:
+   - \usepackage{mathabx}
 output: 
    pdf_document:
      highlight: tango

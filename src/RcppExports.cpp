@@ -7,59 +7,67 @@
 using namespace Rcpp;
 
 // definition_beta
-Rcpp::List definition_beta(const arma::mat X, const arma::mat Y, arma::mat Beta, arma::vec tau, arma::vec omega_vect, const int N_iter, Rcpp::Function computation_norm, double thres, unsigned int non_zeros_pred, arma::vec lambda_start, double ratio_lambda, int num_lambda, unsigned int BIC, bool verbose);
-RcppExport SEXP _flm_definition_beta(SEXP XSEXP, SEXP YSEXP, SEXP BetaSEXP, SEXP tauSEXP, SEXP omega_vectSEXP, SEXP N_iterSEXP, SEXP computation_normSEXP, SEXP thresSEXP, SEXP non_zeros_predSEXP, SEXP lambda_startSEXP, SEXP ratio_lambdaSEXP, SEXP num_lambdaSEXP, SEXP BICSEXP, SEXP verboseSEXP) {
+Rcpp::List definition_beta(const arma::mat& X, const arma::mat& Y, arma::vec& tau, arma::vec& omega_vect, Rcpp::Function computation_norm, Rcpp::Function Proc_Time, double& thres, unsigned int& non_zeros_pred, arma::vec& lambda_H_start, arma::vec& lambda_K_start, double& ratio_lambda_H, int& num_lambda_H, bool verbose, Rcpp::Function sum_cpp);
+RcppExport SEXP _AFSSEN_definition_beta(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP omega_vectSEXP, SEXP computation_normSEXP, SEXP Proc_TimeSEXP, SEXP thresSEXP, SEXP non_zeros_predSEXP, SEXP lambda_H_startSEXP, SEXP lambda_K_startSEXP, SEXP ratio_lambda_HSEXP, SEXP num_lambda_HSEXP, SEXP verboseSEXP, SEXP sum_cppSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::mat >::type X(XSEXP);
-    Rcpp::traits::input_parameter< const arma::mat >::type Y(YSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type Beta(BetaSEXP);
-    Rcpp::traits::input_parameter< arma::vec >::type tau(tauSEXP);
-    Rcpp::traits::input_parameter< arma::vec >::type omega_vect(omega_vectSEXP);
-    Rcpp::traits::input_parameter< const int >::type N_iter(N_iterSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type X(XSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type Y(YSEXP);
+    Rcpp::traits::input_parameter< arma::vec& >::type tau(tauSEXP);
+    Rcpp::traits::input_parameter< arma::vec& >::type omega_vect(omega_vectSEXP);
     Rcpp::traits::input_parameter< Rcpp::Function >::type computation_norm(computation_normSEXP);
-    Rcpp::traits::input_parameter< double >::type thres(thresSEXP);
-    Rcpp::traits::input_parameter< unsigned int >::type non_zeros_pred(non_zeros_predSEXP);
-    Rcpp::traits::input_parameter< arma::vec >::type lambda_start(lambda_startSEXP);
-    Rcpp::traits::input_parameter< double >::type ratio_lambda(ratio_lambdaSEXP);
-    Rcpp::traits::input_parameter< int >::type num_lambda(num_lambdaSEXP);
-    Rcpp::traits::input_parameter< unsigned int >::type BIC(BICSEXP);
+    Rcpp::traits::input_parameter< Rcpp::Function >::type Proc_Time(Proc_TimeSEXP);
+    Rcpp::traits::input_parameter< double& >::type thres(thresSEXP);
+    Rcpp::traits::input_parameter< unsigned int& >::type non_zeros_pred(non_zeros_predSEXP);
+    Rcpp::traits::input_parameter< arma::vec& >::type lambda_H_start(lambda_H_startSEXP);
+    Rcpp::traits::input_parameter< arma::vec& >::type lambda_K_start(lambda_K_startSEXP);
+    Rcpp::traits::input_parameter< double& >::type ratio_lambda_H(ratio_lambda_HSEXP);
+    Rcpp::traits::input_parameter< int& >::type num_lambda_H(num_lambda_HSEXP);
     Rcpp::traits::input_parameter< bool >::type verbose(verboseSEXP);
-    rcpp_result_gen = Rcpp::wrap(definition_beta(X, Y, Beta, tau, omega_vect, N_iter, computation_norm, thres, non_zeros_pred, lambda_start, ratio_lambda, num_lambda, BIC, verbose));
+    Rcpp::traits::input_parameter< Rcpp::Function >::type sum_cpp(sum_cppSEXP);
+    rcpp_result_gen = Rcpp::wrap(definition_beta(X, Y, tau, omega_vect, computation_norm, Proc_Time, thres, non_zeros_pred, lambda_H_start, lambda_K_start, ratio_lambda_H, num_lambda_H, verbose, sum_cpp));
     return rcpp_result_gen;
 END_RCPP
 }
 // definition_beta_CV
-Rcpp::List definition_beta_CV(const arma::mat X_train, const arma::mat Y_train, const arma::mat X_test, const arma::mat Y_test, arma::vec tau, arma::vec omega_vect, const int N_iter, Rcpp::Function computation_norm, double thres, unsigned int non_zeros_pred, arma::vec lambda_start, bool verbose);
-RcppExport SEXP _flm_definition_beta_CV(SEXP X_trainSEXP, SEXP Y_trainSEXP, SEXP X_testSEXP, SEXP Y_testSEXP, SEXP tauSEXP, SEXP omega_vectSEXP, SEXP N_iterSEXP, SEXP computation_normSEXP, SEXP thresSEXP, SEXP non_zeros_predSEXP, SEXP lambda_startSEXP, SEXP verboseSEXP) {
+Rcpp::List definition_beta_CV(const arma::mat& X_train, const arma::mat& Y_train, const arma::mat& X_test, const arma::mat& Y_test, arma::vec& tau, arma::vec& omega_vect, Rcpp::Function computation_norm, Rcpp::Function Proc_Time, double thres, unsigned int non_zeros_pred, arma::vec& lambda_H_start, arma::vec& lambda_K_start, double& ratio_lambda_H, int& num_lambda_H, double early_CV, double early_CV_thres, double max_ite, double target_inc, bool verbose, Rcpp::Function sum_cpp);
+RcppExport SEXP _AFSSEN_definition_beta_CV(SEXP X_trainSEXP, SEXP Y_trainSEXP, SEXP X_testSEXP, SEXP Y_testSEXP, SEXP tauSEXP, SEXP omega_vectSEXP, SEXP computation_normSEXP, SEXP Proc_TimeSEXP, SEXP thresSEXP, SEXP non_zeros_predSEXP, SEXP lambda_H_startSEXP, SEXP lambda_K_startSEXP, SEXP ratio_lambda_HSEXP, SEXP num_lambda_HSEXP, SEXP early_CVSEXP, SEXP early_CV_thresSEXP, SEXP max_iteSEXP, SEXP target_incSEXP, SEXP verboseSEXP, SEXP sum_cppSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::mat >::type X_train(X_trainSEXP);
-    Rcpp::traits::input_parameter< const arma::mat >::type Y_train(Y_trainSEXP);
-    Rcpp::traits::input_parameter< const arma::mat >::type X_test(X_testSEXP);
-    Rcpp::traits::input_parameter< const arma::mat >::type Y_test(Y_testSEXP);
-    Rcpp::traits::input_parameter< arma::vec >::type tau(tauSEXP);
-    Rcpp::traits::input_parameter< arma::vec >::type omega_vect(omega_vectSEXP);
-    Rcpp::traits::input_parameter< const int >::type N_iter(N_iterSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type X_train(X_trainSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type Y_train(Y_trainSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type X_test(X_testSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type Y_test(Y_testSEXP);
+    Rcpp::traits::input_parameter< arma::vec& >::type tau(tauSEXP);
+    Rcpp::traits::input_parameter< arma::vec& >::type omega_vect(omega_vectSEXP);
     Rcpp::traits::input_parameter< Rcpp::Function >::type computation_norm(computation_normSEXP);
+    Rcpp::traits::input_parameter< Rcpp::Function >::type Proc_Time(Proc_TimeSEXP);
     Rcpp::traits::input_parameter< double >::type thres(thresSEXP);
     Rcpp::traits::input_parameter< unsigned int >::type non_zeros_pred(non_zeros_predSEXP);
-    Rcpp::traits::input_parameter< arma::vec >::type lambda_start(lambda_startSEXP);
+    Rcpp::traits::input_parameter< arma::vec& >::type lambda_H_start(lambda_H_startSEXP);
+    Rcpp::traits::input_parameter< arma::vec& >::type lambda_K_start(lambda_K_startSEXP);
+    Rcpp::traits::input_parameter< double& >::type ratio_lambda_H(ratio_lambda_HSEXP);
+    Rcpp::traits::input_parameter< int& >::type num_lambda_H(num_lambda_HSEXP);
+    Rcpp::traits::input_parameter< double >::type early_CV(early_CVSEXP);
+    Rcpp::traits::input_parameter< double >::type early_CV_thres(early_CV_thresSEXP);
+    Rcpp::traits::input_parameter< double >::type max_ite(max_iteSEXP);
+    Rcpp::traits::input_parameter< double >::type target_inc(target_incSEXP);
     Rcpp::traits::input_parameter< bool >::type verbose(verboseSEXP);
-    rcpp_result_gen = Rcpp::wrap(definition_beta_CV(X_train, Y_train, X_test, Y_test, tau, omega_vect, N_iter, computation_norm, thres, non_zeros_pred, lambda_start, verbose));
+    Rcpp::traits::input_parameter< Rcpp::Function >::type sum_cpp(sum_cppSEXP);
+    rcpp_result_gen = Rcpp::wrap(definition_beta_CV(X_train, Y_train, X_test, Y_test, tau, omega_vect, computation_norm, Proc_Time, thres, non_zeros_pred, lambda_H_start, lambda_K_start, ratio_lambda_H, num_lambda_H, early_CV, early_CV_thres, max_ite, target_inc, verbose, sum_cpp));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_flm_definition_beta", (DL_FUNC) &_flm_definition_beta, 14},
-    {"_flm_definition_beta_CV", (DL_FUNC) &_flm_definition_beta_CV, 12},
+    {"_AFSSEN_definition_beta", (DL_FUNC) &_AFSSEN_definition_beta, 14},
+    {"_AFSSEN_definition_beta_CV", (DL_FUNC) &_AFSSEN_definition_beta_CV, 20},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_flm(DllInfo *dll) {
+RcppExport void R_init_AFSSEN(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
