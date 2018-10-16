@@ -1,6 +1,6 @@
 ---
 output:
-  html_document: default
+  pdf_document: default
 ---
 # AFSSEN
 **Adaptive Function-on-Scalar Smoothing Elastic Net**
