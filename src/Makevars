@@ -1,4 +1,4 @@
-CPPFILES = $(FLAME_functions_cpp.cpp)
+CPPFILES = $(FLAME_functions_cpp.cpp) $(RcppExports.cpp)
 
 SOURCES = $(CFILES) $(CPPFILES)
 
