@@ -1,4 +1,4 @@
-CPPFILES = $(wildcard *.cpp)
+CPPFILES = $(FLAME_functions_cpp.cpp)
 
 SOURCES = $(CFILES) $(CPPFILES)
 
