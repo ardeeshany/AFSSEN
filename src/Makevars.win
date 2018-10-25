@@ -1,6 +1,4 @@
-include Makevars
-
-# This is also defined in Makevars, but somehow the definition from there is not used
-OBJECTS = $(CFILES:.c=.o) $(CPPFILES:.cpp=.o)
-
-PKG_LIBS=-lRiconv -lz
+PKG_LIBS = $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" -e "Rcpp:::LdFlags()")
+PKG_CPPFLAGS = -I../inst/include -I. -DNDEBUG
+all: $(SHLIB)
+CXX_STD = CXX11

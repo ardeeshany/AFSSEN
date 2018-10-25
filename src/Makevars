@@ -1,12 +1,4 @@
-CPPFILES = $(FLAME_functions_cpp.cpp) $(RcppExports.cpp)
-
-SOURCES = $(CFILES) $(CPPFILES)
-
-# This must be defined identically in Makevars.win
-OBJECTS = $(CFILES:.c=.o) $(CPPFILES:.cpp=.o)
-
-PKG_CXXFLAGS = -Ireadstat -DHAVE_ZLIB
-PKG_LIBS = -lz
-
+PKG_LIBS = `${R_HOME}/bin/Rscript -e "Rcpp:::LdFlags()"`
+PKG_CXXFLAGS = `${R_HOME}/bin/Rscript -e "Rcpp:::CxxFlags()"`
 CXX_STD = CXX11
 all: $(SHLIB)
