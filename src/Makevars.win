@@ -1,4 +1,3 @@
-PKG_LIBS = $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" -e "Rcpp:::LdFlags()")
-PKG_CPPFLAGS = -I../inst/include -I. -DNDEBUG
-all: $(SHLIB)
-CXX_STD = CXX11
+CC=ccache clang -Qunused-arguments
+CXX=ccache clang++ -Qunused-arguments
+CCACHE_CPP2=yes
