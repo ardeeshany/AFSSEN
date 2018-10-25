@@ -130,7 +130,6 @@ AFSSEN <- function(X,Y, T_domain = seq(0, 1, length = 50),
             return(abs(tot))
         }
 
-        ## ?@A: Are these initial values are fixed or we need to change them in different situation?
         opts= list("algorithm"= "NLOPT_LN_COBYLA", "xtol_rel"=1.0e-16)
 
 
