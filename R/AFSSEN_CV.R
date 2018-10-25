@@ -8,7 +8,6 @@
 #' \code{exponential}, \code{sobolev}.
 #' @param param_kernel scalar. Value of the characteristic smoothing parameter of the kernel.
 #' It is the \eqn{\sigma} parameter of the Gaussian and the Exponential kernel, as introduced
-#'  in \link[kernlab]{rbfdot} and \link[kernlab]{laplacedot} functions;
 #'  the \eqn{\sigma} parameter of  the Sobolev.
 #' Defualt is \code{8}.
 #' @param thres scalar. Stopping criteria: beta increment threshold
