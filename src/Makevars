@@ -1,1 +1,12 @@
-CXX_STD=C++11
+CPPFILES = $(wildcard *.cpp)
+
+SOURCES = $(CFILES) $(CPPFILES)
+
+# This must be defined identically in Makevars.win
+OBJECTS = $(CFILES:.c=.o) $(CPPFILES:.cpp=.o)
+
+PKG_CXXFLAGS = -Ireadstat -DHAVE_ZLIB
+PKG_LIBS = -lz
+
+CXX_STD = CXX11
+all: $(SHLIB)
