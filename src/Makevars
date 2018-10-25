@@ -1,3 +1,4 @@
 PKG_LIBS = `${R_HOME}/bin/Rscript -e "Rcpp:::LdFlags()"`
-CXX_STD = C++11
-CXX=clang++
+PKG_CXXFLAGS = `${R_HOME}/bin/Rscript -e "Rcpp:::CxxFlags()"`
+CXX_STD = CXX11
+all: $(SHLIB)
