@@ -7,8 +7,8 @@
 
 
 // [[Rcpp::depends(RcppArmadillo)]]
-// // [[Rcpp::plugins(cpp11)]]
-// // [[Rcpp::export]]
+// [[Rcpp::plugins(cpp11)]]
+// [[Rcpp::export]]
 
 using namespace Rcpp;
 using namespace arma;
