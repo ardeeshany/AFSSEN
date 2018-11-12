@@ -38,7 +38,7 @@ We have option to control sparsity and smoothness separately with using two pena
 The following **AFFSEN()** function helps us to estimate the smooth $\bf{\beta}$ and find the significant predictors:
 
 <center>
-![](inst/doc/AFSSEN.png)
+![](https://github.com/ardeeshany/AFSSEN/blob/master/inst/doc/AFSSEN.png)
 </center>
 
 
