@@ -10,6 +10,7 @@
 // // [[Rcpp::plugins(cpp11)]]
 // // [[Rcpp::export]]
 
+using namespace Rcpp;
 using namespace arma;
 using namespace std;
 
