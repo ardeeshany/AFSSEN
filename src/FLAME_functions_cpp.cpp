@@ -9,6 +9,12 @@
 // [[Rcpp::depends(RcppArmadillo)]]
 // // [[Rcpp::plugins(cpp11)]]
 // // [[Rcpp::export]]
+
+using namespace arma;
+using namespace std;
+
+
+
 class linear_model {
 
 
