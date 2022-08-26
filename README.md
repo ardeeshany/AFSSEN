@@ -27,9 +27,7 @@ We have option to control sparsity and smoothness separately with using two pena
 <br>
 </br>
 
-<center>
 ![equation](http://latex.codecogs.com/gif.latex?L_%7B%5Clambda%7D%28%5Cbeta%29%3D%5Cdfrac%7B1%7D%7B2N%7D%20%5C%7C%5Cbf%7BY%7D-%5Cbf%7BX%7D%5Cbf%7B%5Cbeta%7D%5C%7C_%7B%5Cmathbb%7BH%7D%7D%5E2&plus;%5Cfrac%7B%5Clambda_%7BK%7D%7D%7B2%7D%20%5Csum_%7Bi%3D1%7D%5E%7BI%7D%20%5C%7CL%28%5Cbeta_%7Bi%7D%29%5C%7C_%7B%5Cmathbb%7BK%7D%7D%5E2%20&plus;%20%5Clambda_%7BH%7D%20%5Csum_%7Bi%3D1%7D%5E%7BI%7D%20%5Ctilde%7Bw%7D_%7Bi%7D%20%5C%7C%20%5Cbeta_%7Bi%7D%5C%7C_%7B%5Cmathbb%7BH%7D%7D)
-</center>
 
 <br>
 </br>
